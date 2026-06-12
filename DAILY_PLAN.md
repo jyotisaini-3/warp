@@ -15,6 +15,16 @@ run is intended to do, and what YOU need to configure for the fuller workflow.
 4. **Contribute to a specific external repo** — fork + PR to a project YOU name
    and intend to engage with. ⚠️ needs you to name the repo (see below).
 
+## Confirmed constraint (tested 2026-06-12)
+
+Forking external repos from inside a run is **denied** by the session's repo
+scope (verified: forking `browser-use/browser-use` returned
+"repository is not configured for this session"). To build on trending repos:
+1. Fork them on github.com manually (one click each) → they become `jyotisaini-3/<name>`.
+2. Add those forks to this environment's repo scope in the Claude Code web UI.
+3. Future daily runs can then clone them, work issues, and open draft PRs
+   **against your own forks** (never against upstream maintainers).
+
 ## Action items for you
 
 - **Add your repos to the session scope.** This session can currently only touch
